@@ -167,7 +167,7 @@ async def generate_response(query, context=None):
         """
     
     response = llm.invoke(prompt)
-    return response
+    return response.content
 
 # Define the LangGraph agent
 async def langgraph_agent(query):

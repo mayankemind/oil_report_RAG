@@ -1,7 +1,7 @@
 from fastapi import APIRouter, UploadFile, HTTPException
 from services.embedding_service import process_and_store_pdf, langgraph_agent
 from models.pdf_embedding import QueryRequest
-router = APIRouter()
+router = APIRouter(prefix="/pdf", tags=["PDF"])
 from typing import List, Dict
 
 @router.post("/upload-pdf/")
